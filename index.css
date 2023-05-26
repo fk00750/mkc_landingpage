@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.slide-image {
-  width: 95%;
-  height: 80%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+@font-face {
+	font-family: "Gagalin";
+	src: url("/fonts/Gagalin-Regular.otf");
+	font-weight: normal;
+	font-style: normal;
 }

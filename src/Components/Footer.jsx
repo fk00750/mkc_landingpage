@@ -1,10 +1,14 @@
 import React from "react";
 
+/**
+ * You are a senior frontend developer with experience in developing mobile friendly and responsive sites, your prefered tools are react and tailwindcss. 
+ * Your current task is to make the following Footer component responsive
+ */
 function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div>
+    <footer className="bg-gray-800 text-white py-8 px-2">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="md:col-span-2 lg:col-span-3">
           <h1 className="text-2xl font-bold mb-4">MKC</h1>
           <p className="text-sm mb-4">
             A brief description of the company and its mission statement can go
