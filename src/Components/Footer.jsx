@@ -1,7 +1,7 @@
 import React from "react";
 
 /**
- * You are a senior frontend developer with experience in developing mobile friendly and responsive sites, your prefered tools are react and tailwindcss. 
+ * You are a senior frontend developer with experience in developing mobile friendly and responsive sites, your prefered tools are react and tailwindcss.
  * Your current task is to make the following Footer component responsive
  */
 function Footer() {
@@ -11,10 +11,14 @@ function Footer() {
         <div className="md:col-span-2 lg:col-span-3">
           <h1 className="text-2xl font-bold mb-4">MKC</h1>
           <p className="text-sm mb-4">
-            A brief description of the company and its mission statement can go
-            here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Major Kalshi Classes, a renowned coaching institute for NEET and JEE
+            exams, has recently launched its new website with the aim of
+            providing a seamless and comprehensive online learning experience to
+            aspiring medical and engineering students.
           </p>
-          <p className="text-sm">Address: 123 Main Street, City, State ZIP</p>
+          <p className="text-sm">
+            Address: 105/244, Shapath Building, Tagore Town, Prayagraj, Uttar Pradesh - 211002
+          </p>
         </div>
         <div>
           <h2 className="text-lg font-bold mb-4">Quick Links</h2>
@@ -43,8 +47,8 @@ function Footer() {
         </div>
         <div>
           <h2 className="text-lg font-bold mb-4">Contact Us</h2>
-          <p className="text-sm mb-2">Phone: 123-456-7890</p>
-          <p className="text-sm mb-2">Email: info@example.com</p>
+          <p className="text-sm mb-2">Phone: (+91) 9696330033</p>
+          <p className="text-sm mb-2">Email: support@majorkalshiclasses.com</p>
           <p className="text-sm">Follow us on social media:</p>
           <div className="flex space-x-2 mt-2">
             <a href="#" className="text-sm text-white hover:text-gray-400">
@@ -61,7 +65,8 @@ function Footer() {
       </div>
       <div className="mt-8 text-center">
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Company Name. All rights reserved.
+          &copy; {new Date().getFullYear()} Major Kalshi Classes. All rights
+          reserved.
         </p>
       </div>
     </footer>

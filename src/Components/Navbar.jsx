@@ -1,32 +1,47 @@
 import React, { useState } from "react";
-
-// Import your logo SVG image
 import logo from "../../public/logo.svg";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { FaPhone } from "react-icons/fa";
 
-// Do the same for JEE button
 function Navbar() {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isJeeMenuOpen, setJeeMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
-  const toggJeeleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isNeetDropdownOpen, setNeetDropdownOpen] = useState(false);
+  const [isJeeDropdownOpen, setJeeDropdownOpen] = useState(false);
+  const [isAboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const [isPreFoundationDropdownOpen, setPreFoundationDropdownOpen] =
+    useState(false);
 
   const navigate = useNavigate();
+
+  const handleMobileMenuToggle = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleNeetDropdownToggle = () => {
+    setNeetDropdownOpen(!isNeetDropdownOpen);
+  };
+
+  const handleJeeDropdownToggle = () => {
+    setJeeDropdownOpen(!isJeeDropdownOpen);
+  };
+
+  const handleAboutDropdownToggle = () => {
+    setAboutDropdownOpen(!isAboutDropdownOpen);
+  };
+
+  const handlePreFoundationDropdownToggle = () => {
+    setPreFoundationDropdownOpen(!isPreFoundationDropdownOpen);
+  };
 
   const handleClick = (e) => {
     e.preventDefault();
     const id = e.target.id;
     switch (id) {
       case "neet_course":
+        navigate("/neet-course");
+        break;
       case "jee_course":
-        navigate("/course");
+        navigate("/jee-course");
         break;
       case "neet_syllabus":
         navigate("/neet-syllabus");
@@ -58,230 +73,301 @@ function Navbar() {
       case "contact_mkc":
         navigate("/contact");
         break;
+      case "pre_foundation":
+        navigate("/pre-foundation");
+        break;
+      case "chairperson_message":
+        navigate("/chairperson-message");
+        break;
+      case "director_message":
+        navigate("/director-message");
+        break;
+      case "pre_foundation_nineten":
+        navigate("/pre-foundation-class-nine-ten");
+        break;
+      case "pre_foundation_ten":
+        navigate("/pre-foundation-class-ten");
+        break;
       default:
         break;
     }
   };
 
   return (
-    <nav className="bg-black text-white">
-      <div className="container mx-auto flex items-center justify-center space-x-2 py-4">
-        <div className="flex items-center mx-8">
-          <img
-            onClick={handleClick}
-            id="logo"
-            src={logo}
-            alt="Logo"
-            className="h-10 w-10 mr-2 cursor-pointer"
-          />
-          <span
-            onClick={handleClick}
-            id="logo_name"
-            className="font-bold text-xl cursor-pointer"
-          >
-            MKC
+    <>
+      <div className="flex justify-between bg-gray-500 items-center py-2 px-4">
+        <div className="flex items-center">
+          <span className="text-white mr-2">
+            <FaPhone />
           </span>
+          <button className="text-white">+919696330033</button>
         </div>
-        <div className="lg:flex hidden items-center">
-          <div className="text-sm lg:flex space-x-4">
-            <div
-              className="relative group flex items-center justify-center -space-x-3"
-              onMouseEnter={() => setMenuOpen(true)}
-              onMouseLeave={() => setMenuOpen(false)}
-            >
-              <button
-                type="button"
-                className={`flex mt-4 lg:inline-block lg:mt-0 text-white ${
-                  isMenuOpen ? "text-gray-300" : "hover:text-gray-300"
-                } mr-4`}
-              >
-                NEET
-              </button>
-              <BsFillArrowDownCircleFill className="h-4 w-4 text-white" />
-              {isMenuOpen && (
-                <div className="absolute bg-black text-white mt-48 p-2 rounded left-0">
-                  <button
-                    onClick={handleClick}
-                    id="neet_course"
-                    className="block w-full text-left py-1 hover:text-blue-400"
-                  >
-                    Course
-                  </button>
-                  <button
-                    onClick={handleClick}
-                    id="neet_syllabus"
-                    className="block w-full text-left py-1 hover:text-blue-400"
-                  >
-                    Syllabus
-                  </button>
-                  <button
-                    onClick={handleClick}
-                    id="neet_notification"
-                    className="block w-full text-left py-1 hover:text-blue-400"
-                  >
-                    Notification
-                  </button>
-                  <button
-                    onClick={handleClick}
-                    id="neet_fee"
-                    className="block w-full text-left py-1 hover:text-blue-400"
-                  >
-                    Fee Structure
-                  </button>
-                  <button
-                    onClick={handleClick}
-                    id="neet_admission"
-                    className="block w-full text-left py-1 hover:text-blue-400"
-                  >
-                    Admission
-                  </button>
-                </div>
-              )}
-            </div>
-            <div
-              className="relative group flex items-center justify-center -space-x-3"
-              onMouseEnter={() => setJeeMenuOpen(true)}
-              onMouseLeave={() => setJeeMenuOpen(false)}
-            >
-              <button
-                type="button"
-                className={`flex mt-4 lg:inline-block lg:mt-0 text-white ${
-                  isJeeMenuOpen ? "text-gray-300" : "hover:text-gray-300"
-                } mr-4`}
-              >
-                JEE
-              </button>
-              <BsFillArrowDownCircleFill className="h-4 w-4 text-white" />
-              {isJeeMenuOpen && (
-                <div className="absolute bg-black text-white mt-48 p-2 rounded left-0">
-                  <button
-                    onClick={handleClick}
-                    id="jee_course"
-                    className="block w-full text-left py-1 hover:text-blue-400"
-                  >
-                    Course
-                  </button>
-                  <button
-                    onClick={handleClick}
-                    id="jee_syllabus"
-                    className="block w-full text-left py-1 hover:text-blue-400"
-                  >
-                    Syllabus
-                  </button>
-                  <button
-                    onClick={handleClick}
-                    id="jee_notification"
-                    className="block w-full text-left py-1 hover:text-blue-400"
-                  >
-                    Notification
-                  </button>
-                  <button
-                    onClick={handleClick}
-                    id="jee_fee"
-                    className="block w-full text-left py-1 hover:text-blue-400"
-                  >
-                    Fee Structure
-                  </button>
-                  <button
-                    onClick={handleClick}
-                    id="jee_admission"
-                    className="block w-full text-left py-1 hover:text-blue-400"
-                  >
-                    Admission
-                  </button>
-                </div>
-              )}
-            </div>
-            <button
-              id="contact_mkc"
-              type="button"
-              onClick={handleClick}
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4"
-            >
-              Contact
-            </button>
-            <button
-              id="about_mkc"
-              type="button"
-              onClick={handleClick}
-              className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4"
-            >
-              About
-            </button>
-          </div>
-          <div>
-            <button className="bg-white text-black px-4 py-2 rounded-md ml-8 mr-2">
-              Pay Now
-            </button>
-          </div>
-          <div>
-            <button className="bg-white text-black px-4 py-2 rounded-md">
-              Start Learning
-            </button>
-          </div>
-        </div>
-
-        <div className="lg:hidden">
-          <button
-            className="text-white focus:outline-none"
-            onClick={toggleMenu}
-          >
-            <svg
-              className="w-6 h-6 fill-current"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {isMenuOpen ? (
-                <path
-                  d="M19.293 6.293l-4.293 4.293 4.293 4.293-1.414 1.414-4.293-4.293-4.293 4.293-1.414-1.414 4.293-4.293-4.293-4.293 1.414-1.414 4.293 4.293 4.293-4.293 1.414 1.414z"
-                  fillRule="evenodd"
-                />
-              ) : (
-                <path
-                  d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"
-                  fillRule="evenodd"
-                />
-              )}
-            </svg>
-          </button>
+        <div className="flex space-x-2 lg:hidden">
+          <button className="text-white">Login</button>
+          <button className="text-white">Pay now</button>
         </div>
       </div>
 
-      <div className={`${isMenuOpen ? "block mx-4" : "hidden"} lg:hidden`}>
-        <div className="text-sm">
-          <button
-            type="button"
-            className="block mt-4 text-white hover:text-gray-300"
+      <nav className="bg-black text-white">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <div className="flex items-center mx-auto">
+            <a href="#" className="flex items-center">
+              <img
+                src={logo}
+                className="h-8 mr-3"
+                alt="MKC Logo"
+                id="logo"
+                onClick={handleClick}
+              />
+              <span
+                onClick={handleClick}
+                id="logo_name"
+                className="self-center text-2xl font-semibold whitespace-nowrap"
+              >
+                MKC
+              </span>
+            </a>
+            <button
+              type="button"
+              className="inline-flex items-center  p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              onClick={handleMobileMenuToggle}
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            className={`${
+              isMobileMenuOpen ? "block" : "hidden"
+            } w-full md:block md:w-auto`}
           >
-            Home
-          </button>
-          <button
-            type="button"
-            className="block mt-4 text-white hover:text-gray-300"
-          >
-            Study Materials
-          </button>
-          <button
-            type="button"
-            className="block mt-4 text-white hover:text-gray-300"
-          >
-            Practice Tests
-          </button>
-          <button
-            type="button"
-            className="block mt-4 text-white hover:text-gray-300"
-          >
-            About
-          </button>
+            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4  bg-black md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 ">
+              <li>
+                <button
+                  className="relative flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:border-0 md:p-0 md:w-auto  dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  onClick={handleAboutDropdownToggle}
+                  onMouseEnter={() => setAboutDropdownOpen(true)}
+                  onMouseLeave={() => setAboutDropdownOpen(false)}
+                >
+                  About
+                  <svg
+                    className={`w-5 h-5 ml-1 ${
+                      isAboutDropdownOpen ? "transform rotate-180" : ""
+                    }`}
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                  {isAboutDropdownOpen && (
+                    <div className="absolute z-10 mt-40 font-normal bg-white rounded-lg divide-y shadow w-44">
+                      <ul
+                        className="py-2 text-sm text-gray-700"
+                        aria-labelledby="dropdownLargeButton"
+                      >
+                        <li>
+                          <a
+                            onClick={handleClick}
+                            id="chairperson_message"
+                            className="block px-4 py-2 hover:bg-gray-100"
+                          >
+                            Chairperson's Message
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            onClick={handleClick}
+                            id="director_message"
+                            className="block px-4 py-2 hover:bg-gray-100"
+                          >
+                            Academic Director's Message
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </button>
+              </li>
+              <li>
+                <button
+                  className="relative flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:border-0 md:p-0 md:w-auto  dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  onClick={handleNeetDropdownToggle}
+                  onMouseEnter={() => setNeetDropdownOpen(true)}
+                  onMouseLeave={() => setNeetDropdownOpen(false)}
+                >
+                  NEET
+                  <svg
+                    className={`w-5 h-5 ml-1 ${
+                      isNeetDropdownOpen ? "transform rotate-180" : ""
+                    }`}
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                  {isNeetDropdownOpen && (
+                    <div className="absolute z-10 mt-20 font-normal bg-white rounded-lg divide-y shadow w-44">
+                      <ul
+                        className="py-2 text-sm text-gray-700"
+                        aria-labelledby="dropdownLargeButton"
+                      >
+                        <li>
+                          <a
+                            onClick={handleClick}
+                            id="neet_course"
+                            className="block px-4 py-2 hover:bg-gray-100"
+                          >
+                            Course
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </button>
+              </li>
+              <li>
+                <button
+                  className="relative flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:border-0 md:p-0 md:w-auto  dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  onClick={handleJeeDropdownToggle}
+                  onMouseEnter={() => setJeeDropdownOpen(true)}
+                  onMouseLeave={() => setJeeDropdownOpen(false)}
+                >
+                  JEE
+                  <svg
+                    className={`w-5 h-5 ml-1 ${
+                      isJeeDropdownOpen ? "transform rotate-180" : ""
+                    }`}
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                  {isJeeDropdownOpen && (
+                    <div className="absolute z-10 mt-20 font-normal bg-white divide-y rounded-lg shadow w-44">
+                      <ul
+                        className="py-2 text-sm text-gray-700"
+                        aria-labelledby="dropdownLargeButton"
+                      >
+                        <li>
+                          <a
+                            onClick={handleClick}
+                            id="jee_course"
+                            className="block px-4 py-2 hover:bg-gray-100"
+                          >
+                            Course
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </button>
+              </li>
+              <li>
+                <button
+                  className="relative flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:border-0 md:p-0 md:w-auto  dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  onClick={handlePreFoundationDropdownToggle}
+                  onMouseEnter={() => setPreFoundationDropdownOpen(true)}
+                  onMouseLeave={() => setPreFoundationDropdownOpen(false)}
+                >
+                  Pre-Foundation
+                  <svg
+                    className={`w-5 h-5 ml-1 ${
+                      isPreFoundationDropdownOpen ? "transform rotate-180" : ""
+                    }`}
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                  {isPreFoundationDropdownOpen && (
+                    <div className="absolute z-10 mt-28 font-normal bg-white rounded-lg divide-y shadow w-44">
+                      <ul
+                        className="py-2 text-sm text-gray-700"
+                        aria-labelledby="dropdownLargeButton"
+                      >
+                        <li>
+                          <a
+                            onClick={handleClick}
+                            id="pre_foundation_nineten"
+                            className="block px-4 py-2 hover:bg-gray-100"
+                          >
+                            2 year- IX & X
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            onClick={handleClick}
+                            id="pre_foundation_ten"
+                            className="block px-4 py-2 hover:bg-gray-100"
+                          >
+                            1 year- X
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </button>
+              </li>
+              <li>
+                <a
+                  id="contact_mkc"
+                  onClick={handleClick}
+                  className="block cursor-pointer py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Contact
+                </a>
+              </li>
+              <li>
+                <button className="block py-2 pl-3 pr-4 text-black bg-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:px-2 md:py-1 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                  Pay Now
+                </button>
+              </li>
+              <li>
+                <button className="block mt-2 lg:mt-0 md:mt-0 py-2 pl-3 pr-4 text-black bg-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:px-2 md:py-1 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                  LogIn
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div className="mt-4">
-          <button className="bg-white text-black px-4 py-2 rounded-md my-2">
-            Start Learning
-          </button>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }
 

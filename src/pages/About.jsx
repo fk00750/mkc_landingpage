@@ -12,7 +12,6 @@ function About() {
       {/* About Section  */}
       <div>
         <Header />
-        <ChairpersonAndDirectorMessage />
       </div>
       {/* Footer  */}
       <Footer />

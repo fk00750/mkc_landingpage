@@ -8,12 +8,12 @@ import PhysicsSyllabus from "../Components/SyllabusComponents/PhysicsSyllabus";
 
 function NeetSyllabus() {
   return (
-    <div>
+    <div className="">
       <Navbar />
       <Heading />
       {/* Syllabus  */}
       <div className="syllabus_container bg-gray-200 flex items-center justify-center py-2 mx-24 rounded-md mt-6 my-10">
-        <div className="physics_syllabus mx-2 my-2">
+        <div className="mx-2 my-2">
           <PhysicsSyllabus />
           <ChemistrySyllabus />
           <BiologySyllabus />

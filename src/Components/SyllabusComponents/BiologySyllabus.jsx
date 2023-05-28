@@ -33,65 +33,64 @@ function BiologySyllabus() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h2 className="text-2xl font-bold mb-4">Biology Syllabus</h2>
-
-      <table className="w-full table-auto border border-white">
-        <thead>
-          <tr>
-            <th className="bg-blue-500 text-white border border-r-0 px-4 py-2  rounded-tl-md">
-              🧠 Biology syllabus for Class 11th
-              <button
-                id="class11"
-                onClick={handleClick}
-                className="bg-white px-2 mx-1 rounded-sm text-sm text-blue-500"
-              >
-                View in detail
-              </button>
-            </th>
-            <th className="bg-blue-500 text-white border border-l-0 px-4 py-2  rounded-tr-md">
-              🧠 Biology syllabus for Class 12th
-              <button
-                id="class11"
-                onClick={handleClick}
-                className="bg-white px-2 mx-1 rounded-sm text-sm text-blue-500"
-              >
-                View in detail
-              </button>
-            </th>
+<div className="container mx-auto px-4 py-8">
+  <h2 className="text-2xl font-bold mb-4">Biology Syllabus</h2>
+  <div className="overflow-x-auto">
+    <table className="w-full table-auto border border-white">
+      <thead>
+        <tr>
+          <th className="bg-blue-500 text-white border border-r-0 px-4 py-2 rounded-tl-md">
+            🧠 Biology syllabus for Class 11th
+            <button
+              id="class11"
+              onClick={handleClick}
+              disabled={true}
+              className="bg-white px-2 mx-1 rounded-sm text-sm text-blue-500"
+            >
+              View in detail
+            </button>
+          </th>
+          <th className="bg-blue-500 text-white border border-l-0 px-4 py-2 rounded-tr-md">
+            🧠 Biology syllabus for Class 12th
+            <button
+              id="class12"
+              onClick={handleClick}
+              disabled={true}
+              className="bg-white px-2 mx-1 rounded-sm text-sm text-blue-500"
+            >
+              View in detail
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {Array.from({
+          length: Math.max(class11Biology.length, class12Biology.length),
+        }).map((_, index) => (
+          <tr className="bg-white" key={index}>
+            <td className="border border-gray-500 px-4 py-2">
+              {class11Biology[index] && (
+                <span className="border-2 border-blue-500 px-2 py-1 text-blue-500 mr-2">
+                  {index + 1}.
+                </span>
+              )}
+              {class11Biology[index]}
+            </td>
+            <td className="border border-gray-500 px-4 py-2">
+              {class12Biology[index] && (
+                <span className="border-2 border-blue-500 px-2 py-1 text-blue-500 mr-2">
+                  {index + 1}.
+                </span>
+              )}
+              {class12Biology[index]}
+            </td>
           </tr>
-        </thead>
-        <tbody>
-          {Array.from({
-            length: Math.max(class11Biology.length, class12Biology.length),
-          }).map((_, index) => (
-            <tr className="bg-white" key={index}>
-              <td className="border border-gray-500 px-4 py-2">
-                {class11Biology[index] && (
-                  <span className="border-2 border-blue-500 px-2 py-1 text-blue-500 mr-2">
-                    {index + 1}.
-                  </span>
-                )}
-                {class11Biology[index]}
-              </td>
-              <td className="border border-gray-500 px-4 py-2">
-                {class12Biology[index] && (
-                  <span className="border-2 border-blue-500 px-2 py-1 text-blue-500 mr-2">
-                    {index + 1}.
-                  </span>
-                )}
-                {class12Biology[index]}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      {/* <div className="my-2 flex justify-end mx-2">
-        <button className="bg-blue-500 px-4 rounded-sm text-xl text-white hover:bg-blue-600">
-          View in detail
-        </button>
-      </div> */}
-    </div>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
   );
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "../Components/ContactComponents/Header";
+import CourseDetails from "../Components/CourseComponents/CourseDetails";
+import Header from "../Components/CourseComponents/Header";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
@@ -8,9 +9,10 @@ function Course() {
     <>
       {/* Navbar  */}
       <Navbar />
-      {/* Contact Us Section  */}
+      {/* Neet Course Section  */}
       <div>
-        <Header />
+        {/* <Header /> */}
+        <CourseDetails />
       </div>
       {/* Footer  */}
       <Footer />

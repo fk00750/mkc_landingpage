@@ -8,21 +8,18 @@ import FeeTable from "../Components/FeeStructureComponents/FeeTable";
 import Notice from "../Components/FeeStructureComponents/Notice";
 
 // Is there any flaw or erro the follow components
-function FeeStructure({ EXAM }) {
+function FeeStructure({ EXAM,Content }) {
   return (
     <>
-      {/* Navbar */}
-      <Navbar />
       {/* Fee Structure Section  */}
       <div className=" border-2 border-dashed border-black mx-4 my-4">
-        <Header EXAM={EXAM} />
+        <Header EXAM={EXAM} Content={Content} />
         <Cards />
         <Features />
         <FeeTable />
         <Notice />
       </div>
       {/* Footer  */}
-      <Footer />
     </>
   );
 }

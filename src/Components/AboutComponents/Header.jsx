@@ -9,9 +9,15 @@ function Header() {
         <div className="md:w-1/2 md:pr-4 text-center md:text-left mb-16">
           <h1 className="text-6xl text-center font-Gagalin mb-4">About Us</h1>
           <p className="text-gray-700 text-center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro,
-            dolorum qui! Esse, quis iusto iste doloremque minima voluptatum ad,
-            quos laudantium autem ea doloribus veniam?
+            Major Kalshi Classes is a renowned coaching institute for NEET and
+            JEE exams, dedicated to providing quality education and support to
+            aspiring medical and engineering students. With experienced faculty,
+            comprehensive study materials, personalized attention, and a focus
+            on overall development, they strive to help students excel in their
+            exams and achieve their goals. We offers easy access to course
+            information, study materials, mock tests, and effective
+            communication channels, reflecting their commitment to delivering an
+            enhanced learning experience.
           </p>
         </div>
         {/* Image */}
