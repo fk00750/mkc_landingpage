@@ -4,6 +4,7 @@ import Syllabus from "../Syllabus";
 import Fee from "../Fee";
 import JeeTable from "../../CollegeNumComponents/NumOfJee";
 import FeeStructure from '../../../pages/FeeStructure'
+import Notification from './components/ExamSchedule'
 
 const content = "Our JEE(MAIN+Advanced) Classroom Course is Cover Entire Syllabus as per standard of competition. MKC Provide unique Teaching Methodology to Crack the competition in prescribe  Timeline. Our Entire Team is dedicated and focus toward JEE(MAIN+ADVANCE) Concept."
 
