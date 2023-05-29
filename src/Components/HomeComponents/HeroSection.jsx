@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage2 from "../../images/Bg.png";
+import bgImage2 from "../../images/bg1.png";
 import Content1 from "../ContentComponents/Content1";
 import Form from "./Form";
 import teacherImage from "../../images/mkc_directorImage.png";
