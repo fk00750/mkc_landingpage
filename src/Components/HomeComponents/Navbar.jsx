@@ -105,8 +105,22 @@ function Navbar() {
           </a>
         </div>
         <div className="flex space-x-2 lg:hidden">
-          <button className="text-white">Login</button>
-          <button className="text-white">Pay now</button>
+          <a
+            href="https://mkcerp.com/CBT548/UserLogin.aspx?ClientID=54800"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white"
+          >
+            Login
+          </a>
+          <a
+            href="https://majorkalshiclasses.com/apply-online"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white"
+          >
+            Pay now
+          </a>
         </div>
       </div>
 
@@ -356,14 +370,24 @@ function Navbar() {
                 </a>
               </li>
               <li>
-                <button className="block py-2 pl-3 pr-4 text-black bg-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:px-2 md:py-1 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                <a
+                  href="https://majorkalshiclasses.com/apply-online"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block py-2 pl-3 pr-4 text-black bg-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:px-2 md:py-1 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
                   Pay Now
-                </button>
+                </a>
               </li>
               <li>
-                <button className="block mt-2 lg:mt-0 md:mt-0 py-2 pl-3 pr-4 text-black bg-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:px-2 md:py-1 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                <a
+                  href="https://mkcerp.com/CBT548/UserLogin.aspx?ClientID=54800"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block mt-2 lg:mt-0 md:mt-0 py-2 pl-3 pr-4 text-black bg-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:px-2 md:py-1 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
                   LogIn
-                </button>
+                </a>
               </li>
             </ul>
           </div>
