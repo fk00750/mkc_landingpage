@@ -1,7 +1,6 @@
 import React from "react";
-import Navbar from "../../../Navbar";
 import content from "../../../../json/physics11Data.json";
-import Footer from "../../../Footer";
+import { Footer, Navbar } from "../../../HomeComponents";
 
 function PhysicsDetailedSyllabusClass11() {
   return (

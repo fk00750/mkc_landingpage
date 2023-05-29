@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Overview from "./Overview";
 import Notification from "./Notification";
 import Syllabus from "./Syllabus";
-import Admission from "./Admission";
 import Fee from "./Fee";
 import NumOfNeetCollegesAndSeats from "../CollegeNumComponents/NumOfNeet";
 import FeeStructure from "../../pages/FeeStructure";
@@ -18,12 +17,12 @@ function CourseDetails() {
   };
 
   return (
-    <div className="container mx-auto py-8 overflow-x-hidden">
+    <div className="container mx-auto py-8">
       <h1 className="text-center font-Gagalin text-4xl my-4">NEET(UG)</h1>
       {/* Navigation buttons */}
-      <div className="flex flex-wrap justify-center mb-4">
+      <div className="flex flex-wrap justify-center mb-4 mx-2">
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 mr-2 ${
+          className={`flex-grow mb-2 sm:mb-0 mr-2 ${
             activeTab === "overview" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("overview")}
@@ -31,7 +30,7 @@ function CourseDetails() {
           OVERVIEW
         </button>
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 mr-2 ${
+          className={`flex-grow mb-2 sm:mb-0 mr-2 ${
             activeTab === "course" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("course")}
@@ -39,7 +38,7 @@ function CourseDetails() {
           Course
         </button>
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 mr-2 ${
+          className={`flex-grow mb-2 sm:mb-0 mr-2 ${
             activeTab === "notification" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("notification")}
@@ -47,7 +46,7 @@ function CourseDetails() {
           NOTIFICATION
         </button>
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 mr-2 ${
+          className={`flex-grow mb-2 sm:mb-0 mr-2 ${
             activeTab === "syllabus" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("syllabus")}
@@ -55,7 +54,7 @@ function CourseDetails() {
           SYLLABUS
         </button>
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 mr-2 ${
+          className={`flex-grow mb-2 sm:mb-0 mr-2 ${
             activeTab === "fee" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("fee")}
@@ -63,7 +62,7 @@ function CourseDetails() {
           FEE STRUCTURE
         </button>
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 ${
+          className={`flex-grow mb-2 sm:mb-0 text-sm ${
             activeTab === "admission" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("admission")}

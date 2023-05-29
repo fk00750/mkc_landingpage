@@ -1,6 +1,5 @@
 import React from "react";
-import Footer from "../Components/Footer";
-import Navbar from "../Components/Navbar";
+import { Navbar, Footer } from "../Components/HomeComponents";
 import BiologySyllabus from "../Components/SyllabusComponents/BiologySyllabus";
 import ChemistrySyllabus from "../Components/SyllabusComponents/ChemistrySyllabus";
 import Heading from "../Components/SyllabusComponents/NeetHeading";

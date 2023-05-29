@@ -1,7 +1,6 @@
 import React from "react";
-import Footer from "../Footer";
-import Navbar from "../Navbar";
 import DirectorImage from "../../../public/logoBG.png";
+import { Footer, Navbar } from "../HomeComponents";
 
 function DirectorMessage() {
   return (

@@ -1,10 +1,11 @@
 import React from "react";
-import Navbar from '../Components/Navbar'
-import HeroSection from '../Components/HeroSection'
-import FeatureSection from '../Components/FeatureSection'
-import SubjectSection from '../Components/SubjectSection'
-import Footer from '../Components/Footer'
-
+import {
+  Navbar,
+  Footer,
+  HeroSection,
+  FeatureSection,
+  SubjectSection,
+} from "../Components/HomeComponents";
 
 function Home() {
   return (

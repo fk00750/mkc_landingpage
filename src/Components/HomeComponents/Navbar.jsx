@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../public/logo.svg";
+import logo from "../../images/logo.svg";
 import { useNavigate } from "react-router-dom";
 import { FaPhone } from "react-icons/fa";
 
@@ -100,7 +100,9 @@ function Navbar() {
           <span className="text-white mr-2">
             <FaPhone />
           </span>
-          <button className="text-white">+919696330033</button>
+          <a href="tel:+919696330033" className="text-white">
+            +919696330033
+          </a>
         </div>
         <div className="flex space-x-2 lg:hidden">
           <button className="text-white">Login</button>
@@ -354,12 +356,12 @@ function Navbar() {
                 </a>
               </li>
               <li>
-                <button className="block py-2 pl-3 pr-4 text-black bg-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:px-2 md:py-1 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                <button className="block py-2 pl-3 pr-4 text-black bg-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:px-2 md:py-1 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                   Pay Now
                 </button>
               </li>
               <li>
-                <button className="block mt-2 lg:mt-0 md:mt-0 py-2 pl-3 pr-4 text-black bg-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:px-2 md:py-1 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                <button className="block mt-2 lg:mt-0 md:mt-0 py-2 pl-3 pr-4 text-black bg-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:px-2 md:py-1 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                   LogIn
                 </button>
               </li>

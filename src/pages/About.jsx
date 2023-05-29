@@ -1,8 +1,6 @@
 import React from "react";
-import ChairpersonAndDirectorMessage from "../Components/AboutComponents/ChairpersonAndDirectorMessage";
 import Header from "../Components/AboutComponents/Header";
-import Footer from "../Components/Footer";
-import Navbar from "../Components/Navbar";
+import { Navbar, Footer } from "../Components/HomeComponents";
 
 function About() {
   return (

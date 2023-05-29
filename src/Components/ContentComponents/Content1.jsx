@@ -2,7 +2,7 @@ import React from "react";
 
 function Content1() {
   return (
-    <div className="text-white ">
+    <div className="text-white mx-1">
       <h1 className="text-2xl font-bold mb-4">
         Unlock Your Potential, Conquer the Exams
       </h1>

@@ -2,7 +2,6 @@ import { useState } from "react";
 import FeeStructure from "../../../pages/FeeStructure";
 import JeeTable from "../../CollegeNumComponents/NumOfJee";
 import Fee from "../Fee";
-import Notification from "../JeeMains/components/ExamSchedule";
 import Syllabus from "../Syllabus";
 import Overview from "./Overview";
 
@@ -20,9 +19,9 @@ const handleTabClick = (tab) => {
   return (
     <div className="container mx-auto py-8 overflow-x-hidden">
       {/* Navigation buttons */}
-      <div className="flex flex-wrap justify-center mb-4">
+      <div className="flex flex-wrap justify-center mb-4 mx-2">
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 mr-2 ${
+          className={`flex-grow mb-2 sm:mb-0 mr-2 ${
             activeTab === "overview" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("overview")}
@@ -30,7 +29,7 @@ const handleTabClick = (tab) => {
           OVERVIEW
         </button>
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 mr-2 ${
+          className={`flex-grow mb-2 sm:mb-0 mr-2 ${
             activeTab === "course" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("course")}
@@ -38,7 +37,7 @@ const handleTabClick = (tab) => {
           Course
         </button>
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 mr-2 ${
+          className={`flex-grow mb-2 sm:mb-0 mr-2 ${
             activeTab === "notification" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("notification")}
@@ -46,7 +45,7 @@ const handleTabClick = (tab) => {
           NOTIFICATION
         </button>
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 mr-2 ${
+          className={`flex-grow mb-2 sm:mb-0 mr-2 ${
             activeTab === "syllabus" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("syllabus")}
@@ -54,7 +53,7 @@ const handleTabClick = (tab) => {
           SYLLABUS
         </button>
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 mr-2 ${
+          className={`flex-grow mb-2 sm:mb-0 mr-2 ${
             activeTab === "fee" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("fee")}
@@ -62,7 +61,7 @@ const handleTabClick = (tab) => {
           FEE STRUCTURE
         </button>
         <button
-          className={`w-full sm:w-auto mb-2 sm:mb-0 ${
+          className={`flex-grow mb-2 sm:mb-0 text-sm ${
             activeTab === "admission" ? "font-bold" : "font-normal"
           } px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500`}
           onClick={() => handleTabClick("admission")}
@@ -70,6 +69,7 @@ const handleTabClick = (tab) => {
           College & Seats
         </button>
       </div>
+      
       {/* Contents */}
       <div>
         <div

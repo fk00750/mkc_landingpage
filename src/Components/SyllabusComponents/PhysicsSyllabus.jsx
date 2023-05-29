@@ -50,28 +50,28 @@ function PhysicsSyllabus() {
         <table className="w-full table-auto border border-white">
           <thead>
             <tr>
-              <th className="bg-blue-500 text-white border border-r-0 px-4 py-2 rounded-tl-md">
+              <th className="bg-gray-700 text-white border border-r-0 px-4 py-2 rounded-tl-md">
                 <span className="flex items-center">
                   🚀 Physics syllabus for Class 11th{" "}
                   <button
                     id="class11"
                     onClick={handleClick}
                     disabled={true}
-                    className="bg-white px-2 mx-1 rounded-sm text-sm text-blue-500"
+                    className="bg-white px-2 mx-1 rounded-sm text-sm text-gray-700"
                   >
                     View in detail{" "}
                     <BsArrowRightShort className="inline-block align-text-bottom ml-1" />
                   </button>
                 </span>
               </th>
-              <th className="bg-blue-500 text-white border border-l-0 px-4 py-2 rounded-tr-md">
+              <th className="bg-gray-700 text-white border border-l-0 px-4 py-2 rounded-tr-md">
                 <span className="flex items-center">
                   🚀 Physics syllabus for Class 12th
                   <button
                     id="class12"
                     disabled={true}
                     onClick={handleClick}
-                    className="bg-white px-2 mx-1 rounded-sm text-sm text-blue-500"
+                    className="bg-white px-2 mx-1 rounded-sm text-sm text-gray-700"
                   >
                     View in detail{" "}
                     <BsArrowRightShort className="inline-block align-text-bottom ml-1" />
@@ -87,7 +87,7 @@ function PhysicsSyllabus() {
               <tr className="bg-white" key={index}>
                 <td className="border border-gray-500 px-4 py-2">
                   {class11Physics[index] && (
-                    <span className="border-2 border-blue-500 px-2 py-1 text-blue-500 mr-2">
+                    <span className="border border-gray-400 rounded-full px-2 py-1 text-gray-700 mr-2">
                       {index + 1}.
                     </span>
                   )}
@@ -95,7 +95,7 @@ function PhysicsSyllabus() {
                 </td>
                 <td className="border border-gray-500 px-4 py-2">
                   {class12Physics[index] && (
-                    <span className="border-2 border-blue-500 px-2 py-1 text-blue-500 mr-2">
+                    <span className="border border-gray-400 rounded-full px-2 py-1 text-gray-700 mr-2">
                       {index + 1}.
                     </span>
                   )}

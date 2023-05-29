@@ -3,7 +3,7 @@ import React from "react";
 function Form() {
   return (
     <div className="bg-white mx-auto px-2 py-2 rounded-md mb-16">
-      <h1 className="text-center text-white rounded-md py-1 mb-5 bg-gray-700">Submit form for free counselling</h1>
+      <h1 className="text-center text-white rounded-md py-1 mb-5 bg-gray-700 px-2 mx-4">Submit form for free counselling</h1>
 
       <form>
         <div className="relative z-0 w-full mb-6 group">

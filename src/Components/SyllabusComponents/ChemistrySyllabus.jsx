@@ -58,24 +58,24 @@ function ChemistrySyllabus() {
         <table className="w-full table-auto border border-white">
           <thead>
             <tr>
-              <th className="bg-blue-500 text-white border border-r-0 px-4 py-2 rounded-tl-md">
+              <th className="bg-gray-700 text-white border border-r-0 px-4 py-2 rounded-tl-md">
                 ⚗️ Chemistry syllabus for Class 11th
                 <button
                   id="class11"
                   onClick={handleClick}
                   disabled={true}
-                  className="bg-white px-2 mx-1 rounded-sm text-sm text-blue-500"
+                  className="bg-white px-2 mx-1 rounded-sm text-sm text-gray-700"
                 >
                   View in detail
                 </button>
               </th>
-              <th className="bg-blue-500 text-white border border-l-0 px-4 py-2 rounded-tr-md">
+              <th className="bg-gray-700 text-white border border-l-0 px-4 py-2 rounded-tr-md">
                 ⚗️ Chemistry syllabus for Class 12th
                 <button
                   id="class12"
                   onClick={handleClick}
                   disabled={true}
-                  className="bg-white px-2 mx-1 rounded-sm text-sm text-blue-500"
+                  className="bg-white px-2 mx-1 rounded-sm text-sm text-gray-700"
                 >
                   View in detail
                 </button>
@@ -92,7 +92,7 @@ function ChemistrySyllabus() {
               <tr className="bg-white" key={index}>
                 <td className="border border-gray-500 px-4 py-2">
                   {class11Chemistry[index] && (
-                    <span className="border-2 border-blue-500 px-2 py-1 text-blue-500 mr-2">
+                    <span className="px-2 py-1 text-gray-700 border border-gray-400 rounded-full mr-2">
                       {index + 1}.
                     </span>
                   )}
@@ -100,7 +100,7 @@ function ChemistrySyllabus() {
                 </td>
                 <td className="border border-gray-500 px-4 py-2">
                   {class12Chemistry[index] && (
-                    <span className="border-2 border-blue-500 px-2 py-1 text-blue-500 mr-2">
+                    <span className="px-2 py-1 text-gray-700 border border-gray-400 rounded-full mr-2">
                       {index + 1}.
                     </span>
                   )}

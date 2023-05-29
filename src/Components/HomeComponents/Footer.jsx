@@ -1,9 +1,6 @@
 import React from "react";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
-/**
- * You are a senior frontend developer with experience in developing mobile friendly and responsive sites, your prefered tools are react and tailwindcss.
- * Your current task is to make the following Footer component responsive
- */
 function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-8 px-2">
@@ -17,7 +14,8 @@ function Footer() {
             aspiring medical and engineering students.
           </p>
           <p className="text-sm">
-            Address: 105/244, Shapath Building, Tagore Town, Prayagraj, Uttar Pradesh - 211002
+            Address: 105/244, Shapath Building, Tagore Town, Prayagraj, Uttar
+            Pradesh - 211002
           </p>
         </div>
         <div>
@@ -51,14 +49,29 @@ function Footer() {
           <p className="text-sm mb-2">Email: support@majorkalshiclasses.com</p>
           <p className="text-sm">Follow us on social media:</p>
           <div className="flex space-x-2 mt-2">
-            <a href="#" className="text-sm text-white hover:text-gray-400">
-              <i className="fab fa-facebook"></i>
+            <a
+              href="https://www.facebook.com/majorkalshiclasses"
+              className="text-sm text-white hover:text-gray-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook />
             </a>
-            <a href="#" className="text-sm text-white hover:text-gray-400">
-              <i className="fab fa-twitter"></i>
+            <a
+              href="https://twitter.com/MajKalshiClases"
+              className="text-sm text-white hover:text-gray-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter />
             </a>
-            <a href="#" className="text-sm text-white hover:text-gray-400">
-              <i className="fab fa-instagram"></i>
+            <a
+              href="https://www.instagram.com/major_kalshi_classes"
+              className="text-sm text-white hover:text-gray-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
             </a>
           </div>
         </div>

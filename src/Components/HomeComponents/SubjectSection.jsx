@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import PreFoundationBanner from "./PreFoundationComponents.jsx/Banner";
-import Biology from "./SubjectsComponent/Biology";
-import Chemistry from "./SubjectsComponent/Chemistry";
-import Math from "./SubjectsComponent/Math";
-import Physics from "./SubjectsComponent/Physics";
+import PreFoundationBanner from "../PreFoundationComponents/Banner";
+import Biology from "../SubjectsComponent/Biology";
+import Chemistry from "../SubjectsComponent/Chemistry";
+import Math from "../SubjectsComponent/Math";
+import Physics from "../SubjectsComponent/Physics";
 
 /**
  * Refactor the following code, when the pre foundation button is clicked our newly created pre foundation banner should appear
@@ -41,7 +41,7 @@ function SubjectSection() {
         <h1 className="text-center text-4xl font-bold mb-8">
           Subject Sections (Physics, Chemistry, Biology, Mathematics):
         </h1>
-        <div className="flex justify-center space-x-4 mb-2">
+        <div className="flex justify-center space-x-4 mb-2 mx-2">
           <button
             id="NEET"
             className={`${

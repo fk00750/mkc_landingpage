@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
 import Header from "../Components/FeeStructureComponents/Header";
 import Cards from "../Components/FeeStructureComponents/Cards";
 import Features from "../Components/FeeStructureComponents/Features";

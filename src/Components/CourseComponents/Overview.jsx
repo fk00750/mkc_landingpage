@@ -2,7 +2,6 @@ import React from "react";
 import NeetExamPatternData from "../../json/NeetExamPettern.json";
 import LatestNeetExamPatternData from "../../json/LatestNeetExamPattern.json";
 import Eligibility from './OverviewComponents/Eligibility'
-import ExamSchedule from './OverviewComponents/ExamSchedule'
 import ExamPattern from './OverviewComponents/ExamPattern'
 import LatestExamPattern from './OverviewComponents/LatestExamPattern'
 import MarkingScheme from "./OverviewComponents/MarkingScheme";

@@ -2,7 +2,7 @@ import React from "react";
 
 function Notice() {
   return (
-    <div className="container mx-auto py-4">
+    <div className="container mx-auto px-4 py-4">
       <div className="bg-blue-200 p-4 rounded-md">
         <div className="flex items-center justify-center mb-4">
           <p className="text-xl">

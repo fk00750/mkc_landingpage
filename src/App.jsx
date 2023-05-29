@@ -16,9 +16,7 @@ import Home from "./pages/Home";
 import NeetSyllabus from "./pages/NeetSyllabus";
 import JeeSyllabus from "./pages/JeeSyllabus";
 import Course from "./pages/Course";
-import Notification from "./pages/Notification";
 import FeeStructure from "./pages/FeeStructure";
-import Admission from "./pages/Admission";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import JeeCourse from "./pages/JeeCourse";
@@ -79,7 +77,6 @@ function App() {
           path="/jee-fee-structure"
           element={<FeeStructure EXAM="JEE(MAIN+ADVANCED)" />}
         />
-        <Route path="/admission" element={<Admission />} />
         <Route
           path="/physics-detailed-syllabus-class-11"
           element={<PhysicsDetailedSyllabusClass11 />}

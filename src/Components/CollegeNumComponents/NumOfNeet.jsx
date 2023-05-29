@@ -7,7 +7,7 @@ import aiimsData from "../../json/NeetCollege.json";
 const AiimsTable = () => {
   return (
     <div className="flex justify-center">
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto mx-4">
         <table className="min-w-max w-full table-auto border border-gray-300">
           <thead>
             <tr className="bg-gray-200">

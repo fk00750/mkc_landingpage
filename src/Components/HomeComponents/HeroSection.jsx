@@ -1,8 +1,8 @@
 import React from "react";
-import bgImage2 from "../../public/d2.png";
-import Content1 from "./ContentComponents/Content1";
+import bgImage2 from "../../images/mkc_HeroSection_background.png";
+import Content1 from "../ContentComponents/Content1";
 import Form from "./Form";
-import teacherImage from "../../public/logoBG.png";
+import teacherImage from "../../images/mkc_directorImage.png";
 
 function HeroSection() {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 
 function FeeTable() {
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto  px-4 py-8">
       <div className="text-center">
         <h1 className="text-2xl font-bold mb-4">Fee Structure</h1>
       </div>
@@ -10,7 +10,7 @@ function FeeTable() {
         <table className="min-w-full border border-gray-300">
           <thead className="bg-gray-800 text-white">
             <tr>
-              <th className="py-2">CATEGORY</th>
+              <th className="py-1">CATEGORY</th>
               <th className="py-2">REGISTRATION FEE</th>
               <th className="py-2">DURATION</th>
               <th className="py-2">ADMISSION FEE</th>

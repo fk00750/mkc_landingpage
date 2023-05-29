@@ -1,8 +1,6 @@
 import React from "react";
 import CourseDetails from "../Components/CourseComponents/CourseDetails";
-import Header from "../Components/CourseComponents/Header";
-import Footer from "../Components/Footer";
-import Navbar from "../Components/Navbar";
+import { Footer, Navbar } from "../Components/HomeComponents";
 
 function Course() {
   return (

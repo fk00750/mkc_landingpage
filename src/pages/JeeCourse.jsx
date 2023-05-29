@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Footer from "../Components/Footer";
-import Navbar from "../Components/Navbar";
+import { Navbar, Footer } from "../Components/HomeComponents";
 import JeeCourseDetails from "../Components/JeeCourseComponents/JeeMains/CourseDetails";
 import JeeAdvanceCourseDetails from "../Components/JeeCourseComponents/JeeAdvance/CourseDetails";
 

@@ -1,10 +1,10 @@
 import React from "react";
-import feature1 from "../../public/feature1.jpg";
-import feature2 from "../../public/feature2.jpg";
-import feature3 from "../../public/feature3.jpg";
-import feature4 from "../../public/feature4.jpg";
-import feature5 from "../../public/feature5.jpg";
-import feature6 from "../../public/feature6.jpg";
+import feature1 from '../../images/feature1.jpg'
+import feature2 from '../../images/feature2.jpg'
+import feature3 from '../../images/feature3.jpg'
+import feature4 from '../../images/feature4.jpg'
+import feature5 from '../../images/feature5.jpg'
+import feature6 from '../../images/feature6.jpg'
 
 function Feature({ title, image, description }) {
   return (
