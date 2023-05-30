@@ -135,13 +135,16 @@ function Navbar() {
                 id="logo"
                 onClick={handleClick}
               />
-              <span
-                onClick={handleClick}
-                id="logo_name"
-                className="self-center text-2xl font-semibold whitespace-nowrap"
-              >
-                MKC
-              </span>
+              <div className="flex flex-col items-center justify-center">
+                <span
+                  onClick={handleClick}
+                  id="logo_name"
+                  className="self-center text-2xl font-semibold whitespace-nowrap"
+                >
+                  MKC
+                </span>
+                <span className="text-xs">(NEET+JEE)</span>
+              </div>
             </a>
             <button
               type="button"
