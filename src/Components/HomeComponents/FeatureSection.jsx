@@ -1,25 +1,25 @@
 import React from "react";
-import feature1 from '../../images/feature1.jpg'
-import feature2 from '../../images/feature2.jpg'
-import feature3 from '../../images/feature3.jpg'
-import feature4 from '../../images/feature4.jpg'
-import feature5 from '../../images/feature5.jpg'
-import feature6 from '../../images/feature6.jpg'
+import feature1 from "../../images/feature1.jpg";
+import feature2 from "../../images/feature2.jpg";
+import feature3 from "../../images/feature3.jpg";
+import feature4 from "../../images/feature4.jpg";
+import feature5 from "../../images/feature5.jpg";
+import feature6 from "../../images/feature6.jpg";
 
 function Feature({ title, image, description }) {
   return (
-    <div className="container mx-auto max-w-md bg-white rounded-lg overflow-hidden shadow-lg">
+    <div className="container mx-2 max-w-md bg-gray-900 text-white rounded-lg overflow-hidden shadow-lg">
       <div className="p-6">
-        <h2 className="text-2xl font-bold mb-4 text-center">{title}</h2>
         <div className="mb-4">
           <img src={image} alt="Feature" className="w-full" />
         </div>
+        <h2 className="text-2xl font-bold mb-4 text-center">{title}</h2>
         {description.map((paragraph, index) => (
-          <p className="text-gray-600 mb-4" key={index}>
+          <p className="text-white mb-4 " key={index}>
             {paragraph}
           </p>
         ))}
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button className="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Show More
         </button>
       </div>
@@ -83,7 +83,7 @@ function FeatureSection() {
   return (
     <div className="bg-gray-100 py-16">
       <div className="container mx-auto">
-        <h1 className="text-center text-4xl font-bold mb-8">
+        <h1 className="text-center text-4xl font-Gagalin mb-8 mx-1">
           Revolutionize Your Preparation: Discover the Benefits of Major Kalshi
           Classes
         </h1>

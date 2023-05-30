@@ -197,7 +197,7 @@ function Navbar() {
                     ></path>
                   </svg>
                   {isAboutDropdownOpen && (
-                    <div className="absolute z-10 mt-40 font-normal bg-white rounded-lg divide-y shadow w-44">
+                    <div className="absolute z-10 mt-40 ml-20 md:ml-0 lg:ml-0 font-normal bg-white rounded-lg divide-y shadow w-44">
                       <ul
                         className="py-2 text-sm text-gray-700"
                         aria-labelledby="dropdownLargeButton"
